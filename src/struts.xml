@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+ "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+ "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+ <package name="digital" namespace="/" extends="struts-default">
+  <action name="userRegister" class="com.digital.action.UserRegisterAction"  >
+      <result name="success" >
+       /success.jsp
+      </result>      
+      <result name="input" >
+       /userReg.jsp
+      </result> 
+  </action>
+  <action name="userLogin" class="com.digital.action.UserLoginAction"  >
+      <result name="success" >
+       /userIndex.jsp
+      </result>      
+      <result name="input" >
+       /userLogin.jsp
+      </result> 
+  </action>
+  <action name="ManagerInfo" class="com.digital.action.AddManagerAction">
+  	 <result name="success">
+  	  /success.jsp
+  	 </result>
+  	 <result name="input">
+  	  /AddManager.jsp
+  	 </result>
+  </action>
+  <action name="managerLogin" class="com.digital.action.ManagerLoginAction">
+  	 <result name="success">
+  	  /WelcomeManager.jsp
+  	 </result>
+  	 <result name="input">
+  	  /managerLogin.jsp
+  	 </result>
+  </action>
+  <action name="QueryUser" class="com.digital.action.QueryUser">
+  	<result name="success">
+  	/userinfo.jsp
+  	</result>
+  	<result name="input">
+  	/queryUser.jsp
+  	</result>
+  </action>
+  <action name="userInfo" class="com.digital.action.AlterUserInfo">
+  	<result name="success">
+  	/userInfo.jsp
+  	</result>
+  	<result name="input">
+  	/userLogin.jsp
+  	</result>
+  </action>
+  <action name="DeleteUser" class="com.digital.action.DeleteUserAction">
+  	<result name="success">
+  	/success.jsp
+  	</result>
+  	<result name="input">
+  	/userLogin.jsp
+  	</result>
+  </action>
+ </package>
+</struts>
